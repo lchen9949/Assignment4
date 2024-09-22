@@ -1,0 +1,74 @@
+body {
+    
+    font-family: sans-serif;
+    width: 960px;
+    margin: 20px auto;
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 80px 400px 50px 200px 200px 50px;
+    grid-template-areas: 
+        "logo .    navi navi"
+        "head head head head"
+        "titl .    titl2 .  "
+        "blo1 blo1 pro1 pro2"
+        "blo2 blo2 pro3 pro4"
+        "foot foot foot foot";
+}
+div, nav ul, header, section, footer, a {
+    background-color: silver;
+}
+#logo {
+    grid-area: logo;
+}
+nav {
+    grid-area: navi;
+    align-self: center;
+}
+nav ul {
+    list-style-type: none;
+    height: 50px;
+    display:grid;
+    grid-template: auto / repeat(4,1fr);
+    grid-gap:20px;
+    align-content: center;
+    justify-items: center;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+header {
+    grid-area: head;
+    /*align-items: center;
+    justify-items: center;*/
+    padding:50px;
+}
+div:nth-of-type(2) {
+    grid-area: titl;
+}
+div:nth-of-type(3) {
+    grid-area: titl2;
+}
+#blog1 {
+    grid-area: blo1;
+}
+#product1 {
+    grid-area: pro1;
+}
+#product2 {
+    grid-area: pro2;
+}
+#blog2 {
+    grid-area: blo2;
+}
+#product3 {
+    grid-area: pro3;
+}
+#product4 {
+    grid-area: pro4;
+}
+footer {
+    grid-area: foot;
+    text-align: center;
+}
